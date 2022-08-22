@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ImmersiveUISample.OfferPage"
+             Title="OfferPage"
+             BackgroundColor="White">
+    <Grid RowDefinitions="*,Auto">
+        <!-- Main image-->
+        <Image Grid.Row="0" Source="mainhome.png" Aspect="AspectFill" Margin="0,-50,0,0"/>
+        <!-- General information-->
+        <Frame Grid.Row="1" CornerRadius="20" VerticalOptions="StartAndExpand" HasShadow="False" BackgroundColor="White" HeightRequest="400" Margin="0,-10,0,0">
+            <Grid RowDefinitions="*,*,*,*,*">
+                <Image Grid.Row="0" Source="key.png" WidthRequest="70" HeightRequest="70" Aspect="AspectFill" HorizontalOptions="Center"/>
+                <Label Grid.Row="1" Text="Offer Accepted" FontSize="23" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Center"/>
+                <Label Grid.Row="2" Text="Welcome home! We are wishing you &#10;all the best in your new home." FontSize="18" HorizontalTextAlignment="Center" TextColor="Silver"/>
+                <Button Grid.Row="3" Text="Schedule final walkthrough" FontAttributes="Bold" TextColor="White" CornerRadius="10" HeightRequest="55" BackgroundColor="#1c85e8"/>
+                <Label Grid.Row="4" Text="SKIP" TextColor="Silver" HorizontalTextAlignment="Center" Padding="0,15,0,0" />
+            </Grid>
+        </Frame>
+    </Grid>
+</ContentPage>

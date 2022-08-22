@@ -1,0 +1,81 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ImmersiveUISample.MainPage"
+             xmlns:sfControl="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+             BackgroundColor="{DynamicResource SecondaryColor}">
+
+    <ScrollView VerticalScrollBarVisibility="Never">
+        <!--Main layout-->
+        <VerticalStackLayout Margin="20,0" VerticalOptions="Center">
+            <!-- Main home image-->
+            <Frame Padding="0" IsClippedToBounds="True" HasShadow="False" CornerRadius="20" Margin="10,25,10,0">
+                <Image Source="mainhome.png" Aspect="AspectFill" HeightRequest="250"/>
+            </Frame>
+            <!--Profile information-->
+            <Grid RowDefinitions="Auto,Auto,Auto" ColumnDefinitions="Auto,*,Auto" Padding="25,20">
+                <!-- Avatar & Badge view-->
+                <sfControl:SfBadgeView Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" BadgeText="1" HeightRequest="70" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center">
+                            <sfControl:SfBadgeView.Content>
+                               <sfControl:SfAvatarView  
+                                ContentType="Default"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                                BackgroundColor="LightBlue"
+                                BorderColor="Transparent"
+                                WidthRequest="50"
+                                HeightRequest="50"
+                                CornerRadius="25"/>
+                            </sfControl:SfBadgeView.Content>
+                            <sfControl:SfBadgeView.BadgeSettings>
+                                <sfControl:BadgeSettings Type="Success" Position="BottomRight"/>
+                            </sfControl:SfBadgeView.BadgeSettings>
+                 </sfControl:SfBadgeView>
+
+                <!-- Basic information: User's name, status, and phone button-->
+                <Label Grid.Row="0" Grid.Column="1" Text="Mark Won" FontAttributes="Bold" TextColor="Black" Padding="20,0,0,0" VerticalTextAlignment="End" FontSize="15"/>
+                <Label Grid.Row="1" Grid.Column="1" Text="Available" FontAttributes="Bold" TextColor="Silver" Padding="20,0,0,0" VerticalTextAlignment="Start" FontSize="13"/>
+                <Button Grid.Row="0" Grid.Column="2" Grid.RowSpan="2" ImageSource="phone" CornerRadius="25" HeightRequest="50" WidthRequest="50"  BackgroundColor="White" BorderColor="Silver" BorderWidth="1" VerticalOptions="Center"/>
+
+            </Grid>
+            <!-- General details-->
+            <Frame CornerRadius="10" BorderColor="Silver" Padding="0,20,0,0" HasShadow="False">
+                <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,*,Auto" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="25,0">
+                      <!--Pre-approved-->
+                    <Label Grid.Row="0" Grid.Column="0" Text="Pre-approved" FontAttributes="Bold" TextColor="Black" FontSize="12"/>
+                    <Label Grid.Row="0" Grid.Column="2" Text="Yes" TextColor="White" BackgroundColor="#00a77c" HorizontalOptions="End" FontSize="10"  Padding="9,4"/>
+                    <BoxView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" HeightRequest="1" Color="Silver" Margin="-25,15" />
+                    <!--Plan to buy-->
+                    <Label Grid.Row="2" Grid.Column="0" Text="Plan to buy" FontAttributes="Bold" TextColor="Black" FontSize="12"/>
+                    <Label Grid.Row="2" Grid.Column="1"  HorizontalOptions="End" TranslationX="25">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Opendoor" TextColor="Black" FontAttributes="Bold" FontSize="13"/>
+                                <Span Text=" Home Loans" TextColor="Black" FontSize="11"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Image Grid.Row="2" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Center" Source="arrow"/>
+                    <BoxView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" HeightRequest="1" Color="Silver" Margin="-25,15" />              
+                     <!--Down payment-->
+                    <Label Grid.Row="4" Grid.Column="0" Text="Down payment" FontAttributes="Bold" TextColor="Black" FontSize="12"/>
+                    <Label Grid.Row="4" Grid.Column="1" Text="$100,000" TextColor="Silver" FontSize="12" HorizontalTextAlignment="End" TranslationX="20"/>
+                    <Label Grid.Row="4" Grid.Column="2" Text="20%" TextColor="Black" FontSize="12" HorizontalTextAlignment="End"/>
+                    <BoxView Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" HeightRequest="1" Color="Silver" Margin="-25,15"  />
+                    <!--Offer amount-->
+                    <Label Grid.Row="6" Grid.Column="0" Text="Offer Amount" FontAttributes="Bold" TextColor="Black" FontSize="12"/>
+                    <Label Grid.Row="6" Grid.Column="2" Text="$500,000" TextColor="Black" FontSize="12" HorizontalOptions="End" />
+
+                     <!--Black space-->
+                    <Frame Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="3" HasShadow="False" BackgroundColor="Black" Margin="-25,20,-25,0">
+                        <HorizontalStackLayout>
+                            <Button ImageSource="mark" CornerRadius="25" HeightRequest="50" WidthRequest="50"  BackgroundColor="White"  VerticalOptions="Center"/>
+                            <Label Text="Mark will go over this with you before&#10;we make our all-cas offer." VerticalTextAlignment="Center" FontSize="12" Padding="15,0,0,0" TextColor="White"/>
+                        </HorizontalStackLayout>
+                    </Frame>
+                </Grid>
+            </Frame>
+            <Button Text="Send offer for review" FontAttributes="Bold" TextColor="White" CornerRadius="10" HeightRequest="50" BackgroundColor="#1c85e8" Margin="0,20"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
