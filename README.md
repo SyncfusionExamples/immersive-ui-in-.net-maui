@@ -1,4 +1,4 @@
-# Immersive UI App in Xamarin Forms
+# Immersive UI App in .NET MAUI
 
 This repository has the .NET MAUI UI project that replicate an Immersive UI App.
 
